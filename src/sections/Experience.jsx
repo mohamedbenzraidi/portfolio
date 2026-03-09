@@ -1,38 +1,30 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "Jun 2025 — Aug 2026",
+    role: "Software Engineering Intern",
+    company: "Direction Générale de la Météorologie (DGM), Casablanca",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Modernized and refactored an existing platform by migrating from Drupal 5 to a Laravel architecture with PostgreSQL. Developed full-stack features following MVC principles, including database design, backend logic, and frontend components. Improved user experience through a responsive UI/UX redesign using Tailwind CSS.",
+    technologies: [
+      "Laravel",
+      "PostgreSQL",
+      "MVC",
+      "Tailwind CSS",
+      "Full-Stack Development",
+    ],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    period: "Jul 2024 — Jul 2024",
+    role: "IT Systems Intern",
+    company: "STMicroelectronics, Casablanca",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
-    current: false,
-  },
-  {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
-    description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
-    current: false,
-  },
-  {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Observed production IT systems and gained hands-on exposure to industrial digitalization practices. Developed an understanding of enterprise IT infrastructure, system workflows, and operational constraints in a manufacturing environment.",
+    technologies: [
+      "IT Systems",
+      "Industrial Digitalization",
+      "Enterprise Infrastructure",
+    ],
     current: false,
   },
 ];
@@ -54,24 +46,17 @@ export const Experience = () => {
           >
             Career Journey
           </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold
-           mt-4 mb-6 animate-fade-in animation-delay-100
-            text-secondary-foreground"
-          >
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-secondary-foreground">
             Experience that{" "}
             <span className="font-serif italic font-normal text-white">
-              {" "}
-              speaks volumes.
+              builds foundations.
             </span>
           </h2>
 
-          <p
-            className="text-muted-foreground
-           animate-fade-in animation-delay-200"
-          >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+          <p className="text-muted-foreground">
+            A timeline of my professional experience through internships, where
+            I worked on real-world systems, modernized platforms, and gained
+            exposure to enterprise environments.
           </p>
         </div>
 

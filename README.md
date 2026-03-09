@@ -1,16 +1,71 @@
-# React + Vite
+# Mohamed Benzraidi - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! 🚀
 
-Currently, two official plugins are available:
+## About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'm a **Software Engineer** passionate about **problem solving and innovation**. This portfolio showcases my work, experience, and the projects I'm most proud of. I build solutions that are both functional and user-centric.
 
-## React Compiler
+## 📋 What's Included
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio features several key sections:
 
-## Expanding the ESLint configuration
+- **Hero** - A bold introduction to who I am
+- **About** - My background and what drives me
+- **Experience** - My professional journey and roles
+- **Principles** - Core values and philosophy
+- **Projects** - Showcase of my best work
+- **Contact** - Ways to get in touch with me
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **React** - UI library
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first styling
+- **JavaScript** - Core language
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd portfolio_med
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `dist/` folder.
+
+## 📧 Contact
+
+Feel free to reach out! You can find contact information in the portfolio's Contact section, or connect with me on:
+
+- **Email** - [Your email here]
+- **LinkedIn** - [Your profile link]
+- **GitHub** - [Your profile link]
+
+---
+
+Built with ❤️ using React and Vite

@@ -1,45 +1,60 @@
+import { useState } from "react";
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "3D Virtual Museum",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+    "An interactive multi-room 3D museum application with asynchronous asset loading and centralized scene management. Includes FPS navigation, user interactions, and optimized runtime performance.",
+    image: "/projects/virtual-museum.png",
+    tags: ["Java", "JMonkeyEngine", "3D Graphics", "Maven", "SQL"],
+    // link: "#",
+    github: "https://github.com/mohamedbenzraidi/robot-3d-java.git",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Financial Forecasting & Monitoring Dashboard",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+      "An intelligent financial platform for internal business intelligence. Tracks sales, expenses, profits, and stock performance with ML-powered predictions for price forecasting, sales trends, risk assessment, and automated alerts.",
+    image: "/projects/financial-dashboard.png",
+    tags: ["Python", "React", "TensorFlow", "Web Scraping", "postgres", "Time Series"],
+    // link: "#",
+    github: "https://github.com/mohamedbenzraidi/smartmarketinsight.git",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Automated Job Application Platform",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+      "A SaaS platform that automates job applications by personalizing resumes and cover letters for each position using AI. Includes automatic submission, application tracking, dashboard with statistics, and email notifications.",
+    image: "/projects/job-automation.png",
+    tags: ["React", "Node.js", "MongoDB", "Express", "OpenAI API", "JWT"],
+    // link: "#",
+    github: "https://github.com/mohamedbenzraidi/Automated-Job-Application-Platform.git",
   },
   {
-    title: "Project Management Tool",
+    title: "Brain MRI Analysis Pipeline",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+      "A complete pipeline for brain MRI analysis, including automated preprocessing, 3D deep learning models for classification and segmentation, and real-time inference through a web interface.",
+    image: "/projects/mri-pipeline.png",
+    tags: ["Python", "PyTorch", "MONAI", "Deep Learning", "Streamlit"],
+    // link: "#",
+    github: "https://github.com/mohamedbenzraidi/irm-project.git",
+  },
+  {
+    title: "Academic Management Platform",
+    description:
+      "A role-based academic management system for administrators, department heads, and teachers. Supports course assignments, document management, reporting, and versioned data tracking.",
+    image: "/projects/academic-platform.png",
+    tags: ["Laravel", "SQL", "Web Development"],
+    // link: "#",
+    github: "https://github.com/mohamedbenzraidi/eservice-laravel.git",
   },
 ];
 
+
 export const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? projects : projects.slice(0, 4);
+
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* Bg glows */}
@@ -65,11 +80,11 @@ export const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
+        <div className="grid md:grid-cols-2 gap-8 md:justify-items-center md:mx-auto">
+          {displayedProjects.map((project, idx) => (
             <div
               key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+              className="group glass rounded-2xl overflow-hidden animate-fade-in w-full"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
               {/* Image */}
@@ -86,12 +101,12 @@ export const Projects = () => {
                 />
                 {/* Overlay Links */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
+                  {/* <a
                     href={project.link}
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
-                  </a>
+                  </a> */}
                   <a
                     href={project.github}
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
@@ -133,12 +148,14 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All Projects
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
-        </div>
+        {!showAll && (
+          <div className="text-center mt-12 animate-fade-in animation-delay-500">
+            <AnimatedBorderButton onClick={() => setShowAll(true)}>
+              View All Projects
+              <ArrowUpRight className="w-5 h-5" />
+            </AnimatedBorderButton>
+          </div>
+        )}
       </div>
     </section>
   );
