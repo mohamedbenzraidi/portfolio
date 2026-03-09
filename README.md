@@ -24,48 +24,6 @@ This portfolio features several key sections:
 - **Tailwind CSS** - Utility-first styling
 - **JavaScript** - Core language
 
-## 🚀 Getting Started
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone <repository-url>
-cd portfolio_med
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Start the development server
-```bash
-npm run dev
-```
-
-The site will be available at `http://localhost:5173`
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-This creates an optimized production build in the `dist/` folder.
-
-## 📧 Contact
-
-Feel free to reach out! You can find contact information in the portfolio's Contact section, or connect with me on:
-
-- **Email** - [Your email here]
-- **LinkedIn** - [Your profile link]
-- **GitHub** - [Your profile link]
-
----
 
 Built with ❤️ using React and Vite
